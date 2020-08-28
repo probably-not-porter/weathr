@@ -23,7 +23,7 @@ form.addEventListener("submit", e => {
       const icon = `https://openweathermap.org/img/wn/${
         weather[0]["icon"]
       }@2x.png`;
-
+      render_info(data); // print info to screen
       clear_layers() // clear all layers
       select_layers(data.weather[0].icon.slice(0,2), data.weather[0].icon.slice(-1)) // selects appropriate layers
   })
@@ -148,6 +148,21 @@ function clear_layers(){
     var layer = elems[i];
     layer.style.visibility = "hidden"; // set layer to hidden
   }
+}
+
+function render_info(data){
+  console.log(data);
+  var container = document.getElementById('information-panel');
+  var info_html = "";
+  info_html += "<span>Location: " + data.name + " </span><br>";
+  info_html += "<span>Temperature: " + k_to_f(data.main.temp) + " </span><br>";
+  info_html += "<span>Conditions: " + data.weather[0].description + " </span><br>";
+  container.innerHTML = info_html;
+}
+
+function k_to_f(valNum) {
+  valNum = parseFloat(valNum);
+  return ((Math.round((((valNum-273.15) *1.8 )+32) + Number.EPSILON) * 100) / 100);
 }
 
 clear_layers() // clear all layers
