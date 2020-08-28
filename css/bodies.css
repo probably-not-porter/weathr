@@ -1,7 +1,11 @@
 #sun{
     width: 12vw;
     height: 12vw;
-    background-color: rgb(216, 203, 133);
+    background: #fefcea; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #fefcea 41%, #f1da36 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #fefcea 41%,#f1da36 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #fefcea 41%,#f1da36 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     position: absolute;
     border-radius: 20vw;
     top: 20%;
