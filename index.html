@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="css/main.css">
 
@@ -17,10 +18,12 @@
                 
             </div>
         </section>
-        <button id='popup-button' class="open-button" onclick="openForm()">Open Form</button>
+        <button id='popup-button' class="open-button" onclick="openForm()">
+            <i class="fa fa-bars"></i>
+        </button>
 
         <div class="form-popup" id="myForm">
-                <form class='form-container'>
+                <form id='form' class='form-container'>
                     <input id='form-input' type="text" placeholder="Search for a city" autofocus>
                     <button type="submit">SUBMIT</button>
                     <span class="msg"></span>

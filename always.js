@@ -23,9 +23,12 @@ form.addEventListener("submit", e => {
       const icon = `https://openweathermap.org/img/wn/${
         weather[0]["icon"]
       }@2x.png`;
+
+      
       closeForm()
       render_info(data); // print info to screen
       clear_layers() // clear all layers
+      document.getElementById('form').reset();
       select_layers(data.weather[0].icon.slice(0,2), data.weather[0].icon.slice(-1)) // selects appropriate layers
   })
 });
@@ -63,16 +66,19 @@ function select_layers(conditions, dayNight){
     }
     else if (conditions == "10"){ // rain
       document.getElementById("color-bg-3").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("rain2-bg").style.visibility = "visible";
 
     }
     else if (conditions == "11"){ // thunderstorm
       document.getElementById("color-bg-3").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("rain2-bg").style.visibility = "visible";
 
     }
     else if (conditions == "13"){ // snow
       document.getElementById("color-bg-2").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("snow").style.visibility = "visible";
 
 
@@ -119,16 +125,19 @@ function select_layers(conditions, dayNight){
     }
     else if (conditions == "10"){ // rain
       document.getElementById("color-bg-4").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("rain2-bg").style.visibility = "visible";
 
     }
     else if (conditions == "11"){ // thunderstorm
       document.getElementById("color-bg-4").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("rain2-bg").style.visibility = "visible";
 
     }
     else if (conditions == "13"){ // snow
       document.getElementById("color-bg-4").style.visibility = "visible";
+      document.getElementById("clouds2-bg").style.visibility = "visible";
       document.getElementById("moon-bg").style.visibility = "visible";
       document.getElementById("snow").style.visibility = "visible";
 
