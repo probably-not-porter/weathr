@@ -33,6 +33,8 @@ form.addEventListener("submit", e => {
 
 function select_layers(conditions, dayNight){
   if (dayNight == "d"){ // currently day
+    document.getElementById("information-panel").style.color = "black";
+
     if (conditions == "01"){ // clear sky
       document.getElementById("color-bg-1").style.visibility = "visible";
       document.getElementById("sun-bg").style.visibility = "visible";
@@ -72,6 +74,8 @@ function select_layers(conditions, dayNight){
     }
     else if (conditions == "13"){ // snow
       document.getElementById("color-bg-2").style.visibility = "visible";
+      document.getElementById("snow").style.visibility = "visible";
+
 
     }
     else if (conditions == "50"){ // mist
@@ -83,6 +87,8 @@ function select_layers(conditions, dayNight){
     }
   }
   else if(dayNight == "n"){ // currently night
+    document.getElementById("information-panel").style.color = "white";
+
     if (conditions == "01"){ // clear sky
       document.getElementById("color-bg-4").style.visibility = "visible";
       document.getElementById("moon-bg").style.visibility = "visible";
@@ -125,6 +131,7 @@ function select_layers(conditions, dayNight){
     else if (conditions == "13"){ // snow
       document.getElementById("color-bg-4").style.visibility = "visible";
       document.getElementById("moon-bg").style.visibility = "visible";
+      document.getElementById("snow").style.visibility = "visible";
 
     }
     else if (conditions == "50"){ // mist
@@ -154,9 +161,9 @@ function render_info(data){
   console.log(data);
   var container = document.getElementById('information-panel');
   var info_html = "";
-  info_html += "<span>Location: " + data.name + " </span><br>";
-  info_html += "<span>Temperature: " + k_to_f(data.main.temp) + " </span><br>";
-  info_html += "<span>Conditions: " + data.weather[0].description + " </span><br>";
+  info_html += "<span id='temp-info'>" + k_to_f(data.main.temp) + "° F</span><br>";
+  info_html += "<span>" + data.name + "</span><br>";
+  info_html += "<span>" + data.weather[0].description + "</span><br>";
   container.innerHTML = info_html;
 }
 

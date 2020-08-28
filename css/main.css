@@ -4,6 +4,8 @@ Pure CSS Weather display
 Porter L
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body{
     background-color: black;
     position: absolute;
@@ -13,6 +15,7 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
 }
 .top-banner{
     background-color: rgba(255,255,255,0.3);
@@ -31,10 +34,15 @@ form{
     display: inline-block;
     float: right;
 }
+
+/* Information Panel */
 #information-panel{
     float:left;
     bottom: 0px;
     position: absolute;
+}
+#temp-info{
+    font-size: 40px;
 }
 
 /* Weather Layers */
