@@ -1,3 +1,9 @@
+/*
+Weathr
+Pure CSS Weather display
+Porter L
+*/
+
 body{
     background-color: black;
     position: absolute;
@@ -31,10 +37,43 @@ form{
     position: absolute;
 }
 
-#rain-bg{
+/* Weather Layers */
+
+#color-bg-1{
+    background: rgb(211,231,232);
+    background: linear-gradient(0deg, rgba(211,231,232,1) 0%, rgba(84,217,244,1) 100%);
+    z-index: 0;
+}
+#color-bg-2{
+    background: rgb(136,186,196);
+    background: linear-gradient(0deg, rgba(136,186,196,1) 0%, rgba(238,238,238,1) 81%);
+    z-index: 0;
+}
+#color-bg-3{
+    background: rgb(190,190,190);
+    background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(149,147,147,1) 81%);
+    z-index: 0;
+}
+#color-bg-4{
+    background: rgb(24,32,62);
+    background: linear-gradient(0deg, rgba(24,32,62,1) 0%, rgba(28,28,28,1) 81%);
+    z-index: 0;
+}
+#moon-bg{
+    z-index: 1;
+}
+#sun-bg{
+    z-index: 1;
 }
 #clouds1-bg{
-    z-index:2;
+    z-index: 2;
 }
-#time-color{
+#clouds2-bg{
+    z-index: 2;
+}
+#rain1-bg{
+    z-index: 2;
+}
+#rain2-bg{
+    z-index: 2;
 }
