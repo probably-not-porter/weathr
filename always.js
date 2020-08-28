@@ -23,7 +23,7 @@ form.addEventListener("submit", e => {
       }@2x.png`;
 
       if ((data.weather[0].icon.slice(-1)) == "n"){
-        document.getElementById("time-color").style.backgroundColor = "#444";
+        document.getElementById("time-color").style.backgroundColor = "#222";
       }
       else if ((data.weather[0].icon.slice(-1)) == "d"){
         document.getElementById("time-color").style.backgroundColor = "blue";

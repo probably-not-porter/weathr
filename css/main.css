@@ -32,10 +32,9 @@ form{
 }
 
 #rain-bg{
-    visibility: hidden;
 }
 #clouds1-bg{
-    visibility: hidden;
+    z-index:2;
 }
 #time-color{
 }
