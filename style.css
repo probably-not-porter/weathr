@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    position: absolute;
+    float: left;    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.top-banner{
+    background-color: rgba(255,255,255,0.3);
+    width: 90%;
+    height: 100px;
+    margin: 10px 0 5% 5%;  
+    position: absolute; 
+    z-index:10;
+}
+h1{
+    margin:0px;
+    display: inline-block;
+    font-size:50px;
+}
+form{
+    display: inline-block;
+    float: right;
+}
+.weather-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#rain-bg{
+    visibility: hidden;
+}
+#clouds1-bg{
+    visibility: hidden;
+}
+#time-color{
+}
