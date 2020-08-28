@@ -4,8 +4,8 @@ Pure CSS Weather display
 Porter L
 */
 
-const form = document.querySelector(".top-banner form");
-const input = document.querySelector(".top-banner input");
+const form = document.getElementById('myForm');
+const input = document.getElementById('form-input');
 
 const apiKey = "8c2b3c56c116012fc50493ce48b8b0a5";
 
@@ -23,12 +23,11 @@ form.addEventListener("submit", e => {
       const icon = `https://openweathermap.org/img/wn/${
         weather[0]["icon"]
       }@2x.png`;
+      closeForm()
       render_info(data); // print info to screen
       clear_layers() // clear all layers
       select_layers(data.weather[0].icon.slice(0,2), data.weather[0].icon.slice(-1)) // selects appropriate layers
   })
-  form.reset();
-  input.focus();
 });
 
 function select_layers(conditions, dayNight){
@@ -171,5 +170,12 @@ function k_to_f(valNum) {
   valNum = parseFloat(valNum);
   return ((Math.round((((valNum-273.15) *1.8 )+32) + Number.EPSILON) * 100) / 100);
 }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
 
 clear_layers() // clear all layers

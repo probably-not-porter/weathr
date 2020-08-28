@@ -14,14 +14,18 @@
     <body>
         <section class="top-banner">
             <div class="container">
-                <h1 class="heading">Weather</h1>
-                <form>
-                    <input type="text" placeholder="Search for a city" autofocus>
+                
+            </div>
+        </section>
+        <button id='popup-button' class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+                <form class='form-container'>
+                    <input id='form-input' type="text" placeholder="Search for a city" autofocus>
                     <button type="submit">SUBMIT</button>
                     <span class="msg"></span>
                 </form>
-            </div>
-        </section>
+        </div>
         <div class='weather-layer' id="color-bg-1"></div>
         <div class='weather-layer' id="color-bg-2"></div>
         <div class='weather-layer' id="color-bg-3"></div>
