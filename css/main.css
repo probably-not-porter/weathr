@@ -20,12 +20,13 @@ body{
 
 /* Information Panel */
 #information-panel{
-    float:left;
-    bottom: 0px;
     position: absolute;
-    z-index:10;
-    padding-left: 3%;
-    padding-bottom: 3%;
+    z-index: 7;
+    float:left;
+    width:100%;
+    height:100%;
+    text-align: center;
+    padding-top:40vh;
 }
 #temp-info{
     font-size: 40px;
