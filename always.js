@@ -187,4 +187,15 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 } 
 
+$(document).ready(function() {
+  $('.weather-layer').click(function() {
+      console.log("close form");
+      closeForm();
+  });
+  $('#default').click(function() {
+    console.log("close form");
+    closeForm();
+});
+});
+
 clear_layers() // clear all layers
